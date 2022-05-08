@@ -1,15 +1,17 @@
-<form (ngSubmit) = display(f) #f="ngForm">
+<div >
+  <form (ngSubmit) = display(f) #f="ngForm">
     <div class="form-group">
       <label >Nom :</label>
-      <input type="text" class="form-control" name="nom" placeholder="Entrer votre nom" ngModel>
+      <input type="text" name="nom" placeholder="Entrer votre nom" ngModel>
     </div><br>  
 
 
     <div class="form-group">
       <label >Age :</label>
-      <input type="number" name = "age" placeholder="Entrer votre Age" ngModel>
+      <input type="number" name ="age" placeholder="Entrer votre Age" ngModel>
     </div><br>
 
-    <button type="submit" >Submit</button>
+    <input type="submit" value="Submit">
   </form><br>
   <h4> {{ message }} </h4>
+</div>

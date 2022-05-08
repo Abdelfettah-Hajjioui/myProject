@@ -9,10 +9,16 @@ import { NgForm } from '@angular/forms';
 export class MyComponentComponent implements OnInit {
 
   message: string = '';
+
   constructor() { }
 
   display(myForm: NgForm) {
-   this.message= "hello "+myForm.value.nom+" vous avez "+myForm.value.age+" ans";
+    if (myForm.value.nom != '' && myForm.value.age!= '') {
+      this.message= "hello "+myForm.value.nom+" vous avez "+myForm.value.age+" ans";
+    } else {
+      this.message = 'please enter your name and your age';
+    }
+   
   }
 
   ngOnInit(): void {
